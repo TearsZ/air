@@ -10,7 +10,7 @@
 
 
 /**
- *
+ * _t 模板函数
  * @param $file
  * @param $path
  * @return mixed
