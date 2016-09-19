@@ -281,3 +281,22 @@ function url2redirect($urlPrefix) {
 function url2dir($dirname) {
     return header('Location: http://'.$_SERVER['HTTP_HOST'].'/'.$dirname.'/');
 } // url2dir is ending.
+
+
+
+function getFileContent($file) {
+    return file_get_contents($file);
+}
+
+
+/**
+ * @param number $errorNumber:
+ * 错误页面数字号码
+ */
+function errpage($errorNumber) {
+    switch ($errorNumber) {
+        case '404':
+        default:
+            exit( getFileContent($_SERVER['DOCUMENT_ROOT'].'/../cmd/404.html') );
+    }
+}
